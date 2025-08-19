@@ -225,3 +225,64 @@ Ameaças são os agentes ou eventos que exploram as vulnerabilidades para causar
 *   A defesa eficaz requer um combate em duas frentes:
     1.  **Corrigir vulnerabilidades:** Atualizar sistemas, treinar pessoas e implementar autenticação forte.
     2.  **Monitorar e mitigar ameaças:** Usar ferramentas para detectar malware, filtrar phishing e absorver ataques DDoS.
+
+
+---
+
+### **Entendendo Impacto e Risco em Segurança**
+
+#### **📉 Impacto (As Consequências)**
+O **Impacto** refere-se às consequências negativas diretas que uma exploração de vulnerabilidade pode causar a uma organização. Ele é geralmente categorizado em três áreas principais:
+
+1.  **Financeiro:**
+    *   Pagamento de **multas** por violação de leis de proteção de dados (ex.: LGPD, GDPR).
+    *   Custos associados à resposta ao incidente, recuperação de sistemas e indenizações.
+
+2.  **Reputacional:**
+    *   **Perda de confiança** de clientes, parceiros e do mercado.
+    *   Danos à imagem da marca, podendo levar à **fuga de clientes**.
+
+3.  **Operacional:**
+    *   **Interrupção de serviços** (ex.: por um ataque DDoS), paralisando operações.
+    *   Perda de produtividade e interrupção dos fluxos de trabalho.
+
+4.  **Legal:**
+    *   Envolvimento em **processos judiciais** e ações regulatórias devido à exposição não autorizada de dados.
+
+---
+
+### **🎯 Risco (A Probabilidade e o Efeito Combinados)**
+O **Risco** é a combinação da **probabilidade** de uma ameaça explorar uma vulnerabilidade e do **impacto** resultante dessa exploração. Ele é calculado para priorizar quais problemas devem ser tratados primeiro.
+
+`Risco = Probabilidade (de uma ameaça explorar uma vulnerabilidade) x Impacto (resultante)`
+
+#### **Matriz de Classificação de Risco:**
+| Probabilidade de Exploração | Impacto Baixo | Impacto Médio | Impacto Alto |
+| :-------------------------- | :------------ | :------------ | :----------- |
+| **Alta**                    | Risco Baixo   | Risco Médio   | **Risco Alto** |
+| **Média**                   | Risco Baixo   | Risco Médio   | **Risco Alto**   |
+| **Baixa**                   | Risco Baixo   | Risco Baixo   | Risco Médio  |
+
+*   **Exemplo Prático (Log4j):**
+    *   **Probabilidade:** **Alta** (fácil de explorar com um comando simples).
+    *   **Impacto:** **Alto** (acesso total ao servidor e dados sensíveis).
+    *   **Resultado:** **Risco EXTREMAMENTE ALTO**, exigindo ação imediata.
+
+---
+
+### **🛡️ Estratégias de Tratamento do Risco**
+
+Uma vez classificado, o risco pode ser tratado de uma das seguintes formas:
+
+1.  **Aceitar:** Conscientemente decidir não agir, geralmente porque o custo da mitigação é maior que o impacto potencial. *Ex.: Um sistema legado crítico que não pode ser substituído.*
+2.  **Mitigar:** Implementar controles para reduzir a **probabilidade** ou o **impacto** do risco. *Ex.: Aplicar um patch, implementar um firewall.*
+3.  **Transferir:** Passar a responsabilidade do risco para um terceiro. *Ex.: Contratar um seguro cibernético ou um serviço gerenciado de segurança.*
+4.  **Evitar:** Eliminar completamente a atividade ou o componente que introduz o risco. *Ex.: Descontinuar um serviço vulnerável ou substituir uma biblioteca problemática.*
+
+---
+
+### **✅ Conclusão-Chave**
+
+*   **Impacto** é sobre a **gravidade** das consequências.
+*   **Risco** é sobre a **chance** dessas consequências acontecerem *e* a sua gravidade.
+*   O gerenciamento eficaz de segurança consiste em **identificar vulnerabilidades**, **avaliar ameaças** e **classificar os riscos** para priorizar e aplicar as estratégias de tratamento mais adequadas.
