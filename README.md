@@ -159,3 +159,69 @@ As políticas de acesso são **dinâmicas**, podendo ser ajustadas automaticamen
 *   **Investimento em Tecnologia e Treinamento:** Requer ferramentas robustas de identidade, monitoramento e análise, além de capacitação das equipes.
 
 ## Aula 02 -Ameaças Cibernéticas e seus impactos
+
+
+
+### Vulnerabilidades vs. Ameaças em Segurança da Informação
+
+
+### **🔓 VULNERABILIDADES (As Fraquezas)**
+
+Vulnerabilidades são falhas ou brechas em sistemas, processos ou pessoas que podem ser exploradas. Elas são a "porta aberta" que permite um ataque.
+
+#### **1. Vulnerabilidades Humanas (O Elo Mais Fraco)**
+*   **Descrição:** Falta de treinamento ou conscientização dos usuários.
+*   **Exemplo:** Um colaborador que clica em um link de **phishing** e divulga credenciais ou informações confidenciais.
+*   **Mitigação:** Programas contínuos de **conscientização e treinamento** em segurança.
+
+#### **2. Vulnerabilidades em Sistemas**
+*   **Descrição:** Bugs ou falhas técnicas que podem ser explorados para ganhar acesso não autorizado ou causar danos.
+*   **Exemplo:** Um botão quebrado é um *bug*; se ele permitir injetar código, torna-se uma *vulnerabilidade*.
+*   **Mitigação:** Revisões de código, testes de penetração e práticas de desenvolvimento seguro (DevSecOps).
+
+#### **3. Vulnerabilidades em Autenticação**
+*   **Descrição:** Mecanismos fracos de verificação de identidade.
+*   **Exemplos:**
+    *   **Senhas Fracas:** Senhas curtas, simples ou reutilizadas.
+    *   **Autenticação Própria:** Desenvolver um sistema de login próprio e potencialmente inseguro.
+*   **Mitigação:**
+    *   Implementar políticas de **senhas complexas** (ex.: 14+ caracteres, misturando maiúsculas, minúsculas, números e símbolos).
+    *   Preferir usar **Single Sign-On (SSO)** com provedores confiáveis (Google, Microsoft) que suportam **Autenticação Multifator (MFA)**.
+
+#### **4. Vulnerabilidades em Dependências (Softwares Desatualizados)**
+*   **Descrição:** Uso de bibliotecas, frameworks ou softwares com versões antigas que contêm falhas de segurança conhecidas.
+*   **Exemplo Crítico:** A vulnerabilidade **Log4Shell (Log4j)** em 2021, que permitia execução remota de código.
+*   **Mitigação:**
+    *   Gerenciamento constante de dependências (ex.: com `npm audit`, `snyk`).
+    *   Implementar um processo de **atualização e patch management** contínuo para todos os componentes (servidores web, bancos de dados, serviços SMTP).
+
+---
+
+### **☠️ AMEAÇAS (Os Agentes de Ataque)**
+
+Ameaças são os agentes ou eventos que exploram as vulnerabilidades para causar danos. Elas são "quem" ou "o quê" tenta atravessar a porta aberta.
+
+#### **1. Malware (Software Malicioso)**
+*   **Vírus:** Precisa de um arquivo hospedeiro para se espalhar.
+*   **Worms:** Se espalham automaticamente pela rede, sem necessidade de um hospedeiro.
+*   **Cavalo de Troia (Trojan):** Disfarça-se de software legítimo para enganar o usuário e instalar uma backdoor.
+*   **Keylogger:** Captura tudo o que é digitado no teclado para roubar credenciais.
+
+#### **2. Engenharia Social**
+*   **Descrição:** Táticas psicológicas que manipulam pessoas para divulgar informações sensíveis ou realizar ações.
+*   **Exemplo Principal:** **Phishing** (e-mails, mensagens) com links ou anexos maliciosos.
+*   **Objetivo:** Extorsão, roubo de dados ou acesso inicial a um ambiente.
+
+#### **3. Ataques de Negação de Serviço (DDoS)**
+*   **Descrição:** Sobrecarregar um servidor ou rede com tráfego fraudulento, tornando-o indisponível para usuários legítimos.
+*   **Como Funciona:** Geralmente realizado por uma **botnet** (rede de dispositivos infectados controlados por um atacante).
+
+---
+
+### **Relação Crucial**
+
+*   Uma **Ameaça** explora uma **Vulnerabilidade** para materializar um **Risco**.
+*   **Entender ambas é o primeiro passo para a prevenção:** Você não pode se defender de uma ameaça se não souber quais vulnerabilidades ela pode explorar.
+*   A defesa eficaz requer um combate em duas frentes:
+    1.  **Corrigir vulnerabilidades:** Atualizar sistemas, treinar pessoas e implementar autenticação forte.
+    2.  **Monitorar e mitigar ameaças:** Usar ferramentas para detectar malware, filtrar phishing e absorver ataques DDoS.
