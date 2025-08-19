@@ -85,3 +85,44 @@ A tríade **CIA** forma a base da segurança da informação:
 
 O equilíbrio entre esses três pilares é essencial para proteger ativos de informação contra ameaças e vulnerabilidades.
 
+Claro! Aqui está um resumo formatado para um README, organizando os conceitos de forma clara e direta.
+
+---
+
+### Autenticidade, Não Repúdio e Auditoria (ANA)
+
+#### **1. Autenticidade 🛡️**
+*   **O que é:** Garantia de que uma informação ou ação é genuína e originada de uma fonte confiável e verificável.
+*   **Como Garantir:**
+    *   **Assinaturas Digitais:** Tecnologias como **DocuSign** provam que uma pessoa específica executou uma ação (ex: assinou um documento).
+*   **Relação com a Integridade:** Se uma informação for modificada, ela perde sua autenticidade e confiabilidade.
+
+#### **2. Não Repúdio (Non-Repudiation) 📝**
+*   **O que é:** Princípio que impede um indivíduo de negar ter realizado uma ação. Fornece **prova irrefutável** da autoria de um evento.
+*   **Como Garantir:**
+    *   **Assinaturas Digitais:** Servem como uma prova de não repúdio.
+    *   **Logs de Auditoria Robustos:** Registros detalhados que capturam "quem", "o quê", "quando" e "onde" de uma ação.
+
+#### **3. Auditoria (Auditing) & Rastreabilidade 🔍**
+*   **O que é:** A prática de **monitorar e registrar** eventos para criar um histórico de atividades. É a base para o não repúdio e a responsabilização.
+*   **Por que é Crítica:** Sem logs, é impossível provar quem executou uma ação, investigar incidentes ou detectar comportamentos maliciosos.
+*   **Exemplo Prático (API Flask):**
+    Um log básico de uma API `127.0.0.1 - - [09/Jul/2025 23:30:33] "GET /api/hello HTTP/1.1" 200 -` é um começo, mas é insuficiente. Logs devem ser enriquecidos com:
+    *   Identidade do usuário (não apenas IP).
+    *   Ação específica realizada.
+    *   Recursos acessados.
+    *   Timestamp.
+    *   Status da operação.
+
+#### **4. Responsabilização (Accountability) 👤**
+*   **O que é:** A consequência direta de uma auditoria eficaz. É a capacidade de **atribuir ações a um indivíduo** específico, tornando-o responsável por suas atividades no sistema.
+*   **Objetivo:** Permite rastrear comportamentos, responder a incidentes e proteger contra negações fraudulentas de ações.
+
+
+### Princípios-Chave
+
+*   **A CIA não é suficiente:** Para segurança robusta, os pilares **Confidencialidade, Integridade e Disponibilidade** devem ser expandidos com **Autenticidade, Não Repúdio e Auditoria**.
+*   **Logs são a prova:** A frase **"Sem log, não há prova"** é fundamental. Logs detalhados são a base para a auditoria e o não repúdio.
+*   **Pense além dos erros:** Ao construir sistemas, não registre apenas falhas. **Registre todas as ações significativas** para permitir a rastreabilidade completa (accountability).
+*   **A quebra desses princípios cria vulnerabilidades críticas,** pois impossibilita a investigação e a responsabilização, deixando sistemas expostos.
+
