@@ -286,3 +286,50 @@ Uma vez classificado, o risco pode ser tratado de uma das seguintes formas:
 *   **Impacto** é sobre a **gravidade** das consequências.
 *   **Risco** é sobre a **chance** dessas consequências acontecerem *e* a sua gravidade.
 *   O gerenciamento eficaz de segurança consiste em **identificar vulnerabilidades**, **avaliar ameaças** e **classificar os riscos** para priorizar e aplicar as estratégias de tratamento mais adequadas.
+
+Claro! Aqui está um resumo estruturado para um README, com uma tabela explicativa, baseado no texto fornecido.
+
+---
+
+### **Classificação de Vulnerabilidades - CVE, CWE e CVSS**
+
+#### **📌 Tabela Comparativa: CVE, CWE e CVSS**
+
+| Sistema | O que é? | Foco | Formato/Exemplo | Finalidade |
+| :--- | :--- | :--- | :--- | :--- |
+| **CVE**<br>(Common Vulnerabilities and Exposures) | Um **registro** de vulnerabilidades específicas e conhecidas. | Vulnerabilidades **específicas** em softwares ou sistemas. | `CVE-AAAA-NNNN`<br>(ex: `CVE-2021-44228` para Log4Shell) | **Identificar** e **padronizar** vulnerabilidades únicas para facilitar a referência e correção. |
+| **CWE**<br>(Common Weakness Enumeration) | Uma **lista** de tipos comuns de falhas de software. | **Categorias** de erros de programação ou design que podem levar a vulnerabilidades. | `CWE-NNN`<br>(ex: `CWE-79`: Cross-site Scripting) | **Educar** desenvolvedores sobre falhas comuns para prevenção proativa durante o desenvolvimento. |
+| **CVSS**<br>(Common Vulnerability Scoring System) | Um **sistema** para pontuar a gravidade de uma vulnerabilidade. | **Avaliar** o **risco** e o **impacto** de uma vulnerabilidade explorada em um contexto específico. | Vetores métricos<br>(ex: `CVSS:4.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H`) | **Priorizar** a correção com base na severidade contextual (nota de 0.0 a 10.0). |
+
+---
+
+### **🔍 Detalhamento dos Conceitos**
+
+#### **1. CVE (Common Vulnerabilities and Exposures)**
+*   **Propósito:** É um identificador único para uma vulnerabilidade específica e pública.
+*   **Como funciona:** Segue o formato `CVE-ANO-ID` (ex: `CVE-2024-12345`).
+*   **Fonte:** Mantido pela MITRE e pode ser consultado no banco de dados oficial: **[https://cve.org](https://cve.org)**.
+*   **Exemplo Prático:** A vulnerabilidade **Log4Shell** foi catalogada como **CVE-2021-44228**.
+
+#### **2. CWE (Common Weakness Enumeration)**
+*   **Propósito:** Classifica **tipos** de falhas, não instâncias específicas. É uma lista de "más práticas" conhecidas.
+*   **Como funciona:** Fornece um número de identificação para cada tipo de fraqueza (ex: `CWE-79` para Cross-site Scripting - XSS).
+*   **Fonte:** Mantido pela MITRE e disponível em: **[https://cwe.mitre.org](https://cwe.mitre.org)**. A lista **CWE Top 25** ranking das falhas mais perigosas.
+*   **Para Devs:** Conhecer o CWE é crucial para programar de forma segura e evitar introduzir falhas comuns.
+
+#### **3. CVSS (Common Vulnerability Scoring System)**
+*   **Propósito:** Fornece uma **nota numérica (de 0.0 a 10.0)** que representa a severidade de uma vulnerabilidade **em um contexto específico**.
+*   **Como funciona:** Usa um conjunto de **vetores métricos** (ex: facilidade de exploração, impacto na Confidencialidade, Integridade e Disponibilidade) para calcular a nota. A versão mais recente é a **4.0**.
+*   **Contexto é tudo:** A mesma vulnerabilidade (CVE) pode ter pontuações CVSS diferentes em ambientes distintos. Um XSS refletido tem uma nota menor que um XSS armazenado, por exemplo.
+*   **Ferramenta:** A calculadora oficial para CVSS 4.0 está em: **[https://www.first.org/cvss/calculator/4.0](https://www.first.org/cvss/calculator/4.0)**.
+
+---
+
+### **🎯 Conclusão e Aplicação Prática**
+
+*   **Fluxo de Trabalho Ideal:**
+    1.  **Identifique** uma falha no código (ex: um XSS é uma **CWE-79**).
+    2.  Se ela for única e pública, ela pode ser catalogada como um **CVE**.
+    3.  Use o **CVSS** para **avaliar sua gravidade** no *seu* ambiente específico e **priorizá-la** frente a outras.
+*   **Priorização:** Nem todo CVE com nota alta no repositório público será crítico para o seu sistema. O CVSS contextual é a ferramenta correta para essa decisão.
+*   **Mentalidade Proativa:** Entender CWE e CVSS ajuda equipes de desenvolvimento a **evitar** falhas e a **corrigir** as mais críticas primeiro, tornando a segurança uma parte integrante do ciclo de vida do desenvolvimento (DevSecOps).
