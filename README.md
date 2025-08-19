@@ -158,4 +158,4 @@ As políticas de acesso são **dinâmicas**, podendo ser ajustadas automaticamen
 *   **Mudança Cultural:** Exige uma mudança de mentalidade de "confiança interna" para "verificação constante".
 *   **Investimento em Tecnologia e Treinamento:** Requer ferramentas robustas de identidade, monitoramento e análise, além de capacitação das equipes.
 
-
+## Aula 02 -Ameaças Cibernéticas e seus impactos
