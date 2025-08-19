@@ -1,6 +1,8 @@
 # Segurança da Informação 🔐
 
-## Pilares da Segurança da Informação (Tríade CIA)
+## Aula 01 - Fundamentos da Segurança da Informação
+
+### Pilares da Segurança da Informação (Tríade CIA)
 A base da segurança da informação repousa sobre três princípios fundamentais, conhecidos como CIA:
 
 - Confidencialidade: Garantir que a informação seja acessível apenas a pessoas autorizadas.
@@ -11,10 +13,10 @@ A base da segurança da informação repousa sobre três princípios fundamentai
 
 A violação de qualquer um desses pilares cria vulnerabilidades críticas.
 
-## Por que a Segurança é Crucial?
+### Por que a Segurança é Crucial?
 A informação é um ativo valioso (dados, conversas, documentos) e sua perda ou vazamento pode causar danos financeiros e reputacionais graves para empresas e indivíduos. O volume massivo de dados trafegados na internet (ex.: milhões de mensagens por minuto) torna a proteção uma necessidade absoluta.
 
-## O Equilíbrio Essencial
+### O Equilíbrio Essencial
 Um sistema eficaz deve encontrar o ponto ideal entre:
 
 - Funcionalidade: O que o sistema faz.
@@ -25,7 +27,7 @@ Um sistema eficaz deve encontrar o ponto ideal entre:
   
 A segurança não deve ser um obstáculo, mas uma aliada integrada que protege sem comprometer a experiência do usuário (ex.: usando autenticação multifator de forma inteligente).
 
-## O que é Cibersegurança?
+### O que é Cibersegurança?
 É a prática de proteger sistemas, redes e dados em ambientes digitais. Sua evolução acompanhou a tecnologia:
 
 - Anos 80-90: Surgimento de antivírus e firewalls.
@@ -34,7 +36,7 @@ A segurança não deve ser um obstáculo, mas uma aliada integrada que protege s
 
 - 2010 em diante: Foco em segurança em nuvem (Cloud Security), BYOD (Bring Your Own Device) e frameworks como Zero Trust (confiança zero) e DevSecOps (integração da segurança no desenvolvimento de software).
 
-## Tendências e Boas Práticas Modernas
+### Tendências e Boas Práticas Modernas
 - DevSecOps: Integrar controles de segurança em todas as etapas do ciclo de desenvolvimento de software.
 
 - Zero Trust: Nunca confiar, sempre verificar. Conceder o mínimo privilégio necessário aos usuários.
@@ -44,11 +46,9 @@ A segurança não deve ser um obstáculo, mas uma aliada integrada que protege s
 - Segurança em IA: Novos desafios e camadas de proteção com o uso massivo de modelos de Inteligência Artificial.
 
 
-Claro! Aqui está um resumo formatado para um arquivo README, organizando as informações de forma clara e direta.
-
 ---
 
-## Pilares da Segurança da Informação - CIA
+### Pilares da Segurança da Informação - CIA
 
 #### **1. Confidencialidade** 🔒
 *   **O que é:** Garantia de que a informação só é acessível por pessoas ou sistemas autorizados.
@@ -84,8 +84,6 @@ A tríade **CIA** forma a base da segurança da informação:
 *   Use **redundância e balanceamento** para garantir a **Disponibilidade**.
 
 O equilíbrio entre esses três pilares é essencial para proteger ativos de informação contra ameaças e vulnerabilidades.
-
-Claro! Aqui está um resumo formatado para um README, organizando os conceitos de forma clara e direta.
 
 ---
 
@@ -126,11 +124,11 @@ Claro! Aqui está um resumo formatado para um README, organizando os conceitos d
 *   **Pense além dos erros:** Ao construir sistemas, não registre apenas falhas. **Registre todas as ações significativas** para permitir a rastreabilidade completa (accountability).
 *   **A quebra desses princípios cria vulnerabilidades críticas,** pois impossibilita a investigação e a responsabilização, deixando sistemas expostos.
 
-Claro! Aqui está um resumo formatado para um README.
+
 
 ---
 
-### **Resumo: Fundamentos do Zero Trust (Confiança Zero)**
+### Fundamentos do Zero Trust (Confiança Zero)
 
 #### **🔐 Visão Geral**
 O **Zero Trust** é um modelo de segurança moderno baseado em um princípio fundamental: **"Nunca confie, sempre verifique"**. Ele abandona o conceito tradicional de uma rede corporativa interna "confiável" e trata **todo usuário e dispositivo**, independente de sua localização (interno ou externo à rede), como uma potencial ameaça até que sua identidade e acesso sejam rigorosamente validados.
