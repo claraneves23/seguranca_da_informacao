@@ -126,3 +126,38 @@ Claro! Aqui está um resumo formatado para um README, organizando os conceitos d
 *   **Pense além dos erros:** Ao construir sistemas, não registre apenas falhas. **Registre todas as ações significativas** para permitir a rastreabilidade completa (accountability).
 *   **A quebra desses princípios cria vulnerabilidades críticas,** pois impossibilita a investigação e a responsabilização, deixando sistemas expostos.
 
+Claro! Aqui está um resumo formatado para um README.
+
+---
+
+### **Resumo: Fundamentos do Zero Trust (Confiança Zero)**
+
+#### **🔐 Visão Geral**
+O **Zero Trust** é um modelo de segurança moderno baseado em um princípio fundamental: **"Nunca confie, sempre verifique"**. Ele abandona o conceito tradicional de uma rede corporativa interna "confiável" e trata **todo usuário e dispositivo**, independente de sua localização (interno ou externo à rede), como uma potencial ameaça até que sua identidade e acesso sejam rigorosamente validados.
+
+#### **🛡️ Princípios Centrais**
+1.  **Verificação Contínua:** Toda tentativa de acesso a qualquer recurso deve ser autenticada, autorizada e criptografada. A confiança nunca é concedida permanentemente.
+2.  **Privilégio Mínimo (Least Privilege):** Os usuários e dispositivos recebem **apenas as permissões estritamente necessárias** para realizar uma tarefa específica, limitando o potencial estrago de um acesso comprometido.
+3.  **Segmentação de Rede:** A rede é dividida em micro-segmentos ou zonas de segurança. Isso impede que um invasor, após ganhar acesso a uma parte do sistema, se mova lateralmente por toda a infraestrutura.
+
+#### **⚙️ Como é Implementado?**
+A implementação do Zero Trust depende de verificações rigorosas e contextuais para cada solicitação de acesso. Essas verificações podem incluir:
+*   **Autenticação Multifator (MFA)**
+*   **Verificação da integridade e conformidade do dispositivo**
+*   **Análise comportamental do usuário** (para detectar atividades anômalas)
+*   **Avaliação de risco em tempo real** (com base no local, horário, sensibilidade do recurso, etc.)
+
+As políticas de acesso são **dinâmicas**, podendo ser ajustadas automaticamente com base no contexto da solicitação.
+
+#### **✅ Vantagens**
+*   **Redução da Superfície de Ataque:** Ameaças internas e externas são tratadas com o mesmo ceticismo.
+*   **Contenção de Brechas:** A segmentação limita o raio de explosão de uma potencial invasão.
+*   **Maior Visibilidade e Controle:** Oferece um entendimento granular de quem está acessando o quê e quando.
+*   **Suporte para Trabalho Remoto e BYOD:** É ideal para ambientes onde os recursos não estão mais confinados a um perímetro de rede físico.
+
+#### **⚠️ Desafios**
+*   **Complexidade de Implementação:** Integrar o modelo com sistemas legados pode ser desafiador.
+*   **Mudança Cultural:** Exige uma mudança de mentalidade de "confiança interna" para "verificação constante".
+*   **Investimento em Tecnologia e Treinamento:** Requer ferramentas robustas de identidade, monitoramento e análise, além de capacitação das equipes.
+
+
