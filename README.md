@@ -44,5 +44,44 @@ A segurança não deve ser um obstáculo, mas uma aliada integrada que protege s
 - Segurança em IA: Novos desafios e camadas de proteção com o uso massivo de modelos de Inteligência Artificial.
 
 
-  
+Claro! Aqui está um resumo formatado para um arquivo README, organizando as informações de forma clara e direta.
+
+---
+
+## Pilares da Segurança da Informação - CIA
+
+#### **1. Confidencialidade** 🔒
+*   **O que é:** Garantia de que a informação só é acessível por pessoas ou sistemas autorizados.
+*   **Exemplo Prático:** O acesso à sua conta bancária online é protegido por login, senha e, muitas vezes, um token (2FA). Sem essas credenciais, os dados (como seu saldo) devem permanecer inacessíveis.
+*   **Riscos:** Quebras de confidencialidade permitem que invasores acessem dados sensíveis indevidamente, através de métodos como engenharia social ou manipulação de URLs.
+*   **Como Garantir:**
+    *   Utilizando autenticação robusta (senhas fortes).
+    *   Implementando **Autenticação Multifator (MFA)** com tokens, biometria ou aplicativos autenticadores.
+    *   Adotando o princípio de menor privilégio.
+
+#### **2. Integridade** ✅
+*   **O que é:** Garantia de que os dados estão completos, precisos e não foram alterados de forma não autorizada.
+*   **Exemplo Prático:** Senhas nunca devem ser armazenadas em texto puro, mas sim como **hashes** (valores irreversíveis). Se um invasor modificar o hash no banco de dados, a integridade é violada e o acesso pode ser comprometido.
+*   **Como Garantir:**
+    *   Uso de funções de **hash** criptográficas (ex: SHA-256) para verificar a autenticidade de dados e arquivos.
+    *   Verificação de hashes de arquivos baixados (ex: ISOs de sistemas operacionais) comparando o valor calculado com o fornecido pelo distribuidor.
+    *   Uso de **assinaturas digitais** para verificar a autoria e a não alteração de documentos.
+
+#### **3. Disponibilidade** ⏱️
+*   **O que é:** Garantia de que os sistemas e dados estarão acessíveis para usuários autorizados quando necessário.
+*   **Exemplo Prático:** Um ataque de **negação de serviço (DDoS)** que derruba um site é uma violação direta da disponibilidade.
+*   **Como Garantir:**
+    *   Implementação de redundância (servidores em cluster).
+    *   Uso de **balanceadores de carga** para distribuir tráfego e evitar sobrecarga.
+    *   Planos de recuperação de desastres (backups).
+
+---
+
+### **Conclusão**
+A tríade **CIA** forma a base da segurança da informação:
+*   Use **autenticação forte e MFA** para garantir a **Confidencialidade**.
+*   Use **hashes e assinaturas** para garantir a **Integridade**.
+*   Use **redundância e balanceamento** para garantir a **Disponibilidade**.
+
+O equilíbrio entre esses três pilares é essencial para proteger ativos de informação contra ameaças e vulnerabilidades.
 
