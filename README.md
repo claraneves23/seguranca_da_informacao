@@ -367,3 +367,84 @@ Os ataques cibernéticos são impulsionados por diferentes **motivos** (ex.: pol
 | **Ameaças Internas (Insider)**  | Controle de acesso baseado em função (RBAC), monitoramento de atividades de usuários (UEBA), programas de conscientização.                 |
 | **Ameaças de Engenharia Social** | Treinamento contínuo de conscientização em segurança, simulações de phishing, políticas claras para manipulação de dados sensíveis.        |
 
+
+
+### Fases de um Ataque Cibernético e Técnicas de Reconhecimento
+
+O processo de ataque segue um roteiro estruturado, começando pelo reconhecimento e culminando na ocultação das atividades.
+
+```mermaid
+graph TD
+    A[Reconhecimento Passivo] --> B[Reconhecimento Ativo]
+    B --> C[Scanning e Enumeração]
+    C --> D[Exploração e Acesso]
+    D --> E[Pós-Exploração]
+    E --> F[Ofuscamento de Rastros]
+```
+
+---
+
+### 1. Fase de Reconhecimento (Information Gathering)
+
+É a fase inicial de coleta de informações sobre o alvo. Divide-se em duas abordagens:
+
+#### Reconhecimento Passivo
+Coleta de informações **sem interação direta** com o alvo.
+*   **Ferramentas:** Mecanismos de busca (Google Hacking).
+*   **Técnicas:**
+    *   **Google Dorking:** Uso de queries específicas para encontrar informações sensíveis indexadas.
+        *   Ex: `intitle:phpmyadmin filetype:php intext:login`
+    *   Busca por arquivos de configuração como `robot.txt` e `sitemap.xml` para descobrir URLs e diretórios não públicos.
+    *   Consulta a bases de dados de vulnerabilidades (como CVE Details) para pesquisar falhas conhecidas em tecnologias identificadas.
+
+#### Reconhecimento Ativo
+Coleta de informações que envolve **interação direta** com o alvo.
+*   **Técnicas:** Engenharia social (por telefone, e-mail) e interação com sistemas.
+*   **Ferramentas:**
+    *   **Dirb/Dirbuster:** Para enumerar diretórios e arquivos em um servidor web.
+        *   Ex: `dirb http://[target]/ /usr/share/wordlists/dirb/common.txt`
+    *   Análise de **cabeçalhos HTTP** para identificar tecnologias (ex.: `Server: Werkzeug/2.0.3 Python/3.6.15`).
+
+---
+
+### 2. Fase de Scanning e Enumeração
+
+Uso de ferramentas para escanear a rede e sistemas, identificando pontos de entrada potenciais.
+
+*   **Ferramenta Principal: Nmap (Network Mapper)**
+    *   **Scan Básico:** `nmap [target]` - Lista portas abertas e serviços.
+    *   **Scan Agressivo:** `nmap -v -A [target]` - Identifica versões de serviços e SO.
+    *   **Scan com Scripts:** `nmap --script=[script-name] [target]` - Usa scripts NSE para enumeração avançada (ex.: `mysql-enum`).
+*   **Resultados Típicos:** Identificação de serviços (SSH, HTTP, MySQL) em portas abertas, com suas versões.
+
+---
+
+### 3. Exploração e Acesso
+
+Após identificar uma vulnerabilidade, o atacante tenta explorá-la para ganhar acesso inicial ao sistema.
+
+---
+
+### 4. Pós-Exploração e Manutenção de Acesso
+
+O objetivo é consolidar o acesso e persistir no sistema.
+
+*   **Persistência:** Criar backdoors ou scripts para manter acesso futuro.
+*   **Escalação de Privilégios:** Obter permissões mais elevadas (ex.: usuário root).
+    *   **Técnica Comum:** Explorar binários com permissão SUID.
+        *   Comando: `find / -perm -u=s -type f 2>/dev/null`
+    *   **Exemplo de Exploração:** Usar um interpretador (ex.: PHP) para executar um shell com privilégios elevados.
+        *   Ex: `/usr/bin/php7.2 -r 'pcntl_exec("/bin/bash", ["-p"]);'`
+
+---
+
+#### 5. Ofuscamento de Rastros (Apagando Evidências)
+
+A fase final consiste em apagar logs e quaisquer evidências da atividade maliciosa para evitar detecção.
+
+*   **Alvos Principais:** Logs de autenticação e atividades do sistema.
+*   **Localização Comum:** `/var/log/`
+*   **Arquivos Críticos:** `/var/log/auth.log` (logs de SSH, sudo, login).
+
+---
+
