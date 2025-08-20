@@ -287,7 +287,6 @@ Uma vez classificado, o risco pode ser tratado de uma das seguintes formas:
 *   **Risco** é sobre a **chance** dessas consequências acontecerem *e* a sua gravidade.
 *   O gerenciamento eficaz de segurança consiste em **identificar vulnerabilidades**, **avaliar ameaças** e **classificar os riscos** para priorizar e aplicar as estratégias de tratamento mais adequadas.
 
-Claro! Aqui está um resumo estruturado para um README, com uma tabela explicativa, baseado no texto fornecido.
 
 ---
 
@@ -333,3 +332,38 @@ Claro! Aqui está um resumo estruturado para um README, com uma tabela explicati
     3.  Use o **CVSS** para **avaliar sua gravidade** no *seu* ambiente específico e **priorizá-la** frente a outras.
 *   **Priorização:** Nem todo CVE com nota alta no repositório público será crítico para o seu sistema. O CVSS contextual é a ferramenta correta para essa decisão.
 *   **Mentalidade Proativa:** Entender CWE e CVSS ajuda equipes de desenvolvimento a **evitar** falhas e a **corrigir** as mais críticas primeiro, tornando a segurança uma parte integrante do ciclo de vida do desenvolvimento (DevSecOps).
+
+ 
+---
+
+# Ameaças e Vetores de Ataque em Segurança da Informação
+
+
+Os ataques cibernéticos são impulsionados por diferentes **motivos** (ex.: político, financeiro, espionagem) e empregam diversos **métodos** (ex.: exploração de vulnerabilidades, engenharia social). A compreensão desses elementos é crucial para a classificação de ameaças e a implementação de controles de mitigação eficazes.
+
+## Categorias de Ataque
+
+| Categoria de Ataque          | Descrição                                                                                                                              | Exemplos Comuns                                  |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| **Vulnerabilidades de Aplicação** | Falhas exploráveis no código ou configuração de software.                                                                              | XSS, SQL Injection                               |
+| **Ataques à Infraestrutura**     | Ataques direcionados a sistemas, redes ou servidores.                                                                                  | Negação de Serviço (DoS/DDoS), APTs              |
+| **Ameaças Baseadas em Rede**    | Ameaças que utilizam a rede como vetor principal.                                                                                      | Botnets, Phishing                                |
+| **Ameaças de Malware**          | Software malicioso projetado para causar danos ou obter acesso não autorizado.                                                          | Ransomware, Vírus                                |
+| **Ameaças em Ambientes Cloud**  | Ataques que exploram configurações inadequadas ou permissões excessivas em ambientes de nuvem.                                          | Exposição de containers, permissões elevadas     |
+| **Ameaças Mobile**             | Ataques que visam aplicativos e dados em dispositivos móveis.                                                                           | Decompilação de apps, acesso a bancos locais     |
+| **Ameaças Internas (Insider)**  | Ataques provenientes de dentro da organização, por indivíduos mal-intencionados ou negligentes.                                         | Vazamento de dados, abuso de credenciais         |
+| **Ameaças de Engenharia Social** | Táticas que manipulam pessoas para obter acesso a informações ou sistemas.                                                              | Phishing                                         |
+
+## Estratégias de Mitigação
+
+| Categoria de Ataque          | Estratégias de Mitigação e Prevenção                                                                                                   |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Vulnerabilidades de Aplicação** | Adoção de uma **cultura de desenvolvimento seguro (DevSecOps)**, revisões de código, testes de penetração, uso de ferramentas de SAST/DAST. |
+| **Ataques à Infraestrutura**     | Configuração robusta de firewalls, sistemas de detecção de intrusão (IDS/IPS), segmentação de rede, planos de resposta a incidentes.       |
+| **Ameaças Baseadas em Rede**    | Filtros de anti-spam, conscientização contra phishing, monitoramento de tráfego de rede para detectar botnets.                            |
+| **Ameaças de Malware**          | Uso de antivírus/antimalware atualizados, backups regulares e imutáveis (contra ransomware), políticas de restrição de execução.           |
+| **Ameaças em Ambientes Cloud**  | Aplicação do princípio do **menor privilégio**, auditoria regular de permissões (IAM), configuração segura de serviços e containers.       |
+| **Ameaças Mobile**             | Ofuscação de código, criptografia de bancos de dados locais, validação rigorosa no cliente e no servidor.                                 |
+| **Ameaças Internas (Insider)**  | Controle de acesso baseado em função (RBAC), monitoramento de atividades de usuários (UEBA), programas de conscientização.                 |
+| **Ameaças de Engenharia Social** | Treinamento contínuo de conscientização em segurança, simulações de phishing, políticas claras para manipulação de dados sensíveis.        |
+
