@@ -695,3 +695,49 @@ Um controle de segurança é uma medida implementada para **minimizar riscos** s
 - **Autenticação**: Políticas de senha robustas
 - **Autorização**: Definição clara de permissões por função
 - **Auditoria**: Monitoramento de acessos críticos
+
+### Framework NIST-CSF 
+Framework de segurança da informação desenvolvido pelo **NIST** (National Institute of Standards and Technology), órgão norte-americano que estabelece padrões tecnológicos.
+
+####  Objetivo Principal
+Ajudar organizações a:
+- Entender e priorizar riscos de segurança
+- Detectar e responder a ameaças
+- Recuperar sistemas após incidentes
+- Melhorar continuamente a maturidade de segurança
+
+#### Componentes Principais
+
+##### 1. **Núcleo do Framework**
+| Função | Descrição |
+|--------|-----------|
+| **Identificar** | Compreender riscos e ativos do ambiente |
+| **Proteger** | Implementar salvaguardas preventivas |
+| **Detectar** | Monitorar e identificar eventos de segurança |
+| **Responder** | Agir contra incidentes detectados |
+| **Recuperar** | Restaurar sistemas e operações |
+
+##### 2. **Perfis de Implementação**
+- Contextualizam o framework para **diferentes ambientes** (ex: financeiro, saúde)
+- Permitem **controles específicos** baseados no setor e necessidades
+
+##### 3. **Níveis de Maturidade**
+1. **Parcial** - Implementação inicial/esporádica
+2. **Formado pelo Risco** - Gestão consciente de riscos  
+3. **Repetível** - Processos consistentes e repetíveis
+4. **Adaptável** - Melhoria contínua baseada em aprendizado
+
+#### 🛠️ Framworks Relacionados NIST
+
+| Framework | Área de Foco |
+|-----------|-------------|
+| **NIST SP 1800** | Práticas de criptografia |
+| **NIST 888** | Sanitização de mídia |
+| **NIST SP 8218** | Desenvolvimento seguro |
+
+#### 💡 Práticas de Desenvolvimento Seguro (NIST SP 8218)
+- **Sanitização de inputs** - Prevenção contra injeções (XSS, SQLi)
+- **Configurações seguras por padrão** - Hardening de ambientes
+- **Testes de segurança** - Validação de requisitos e vulnerabilidades
+- **Linha de base de segurança** - Configurações padrão seguras
+
