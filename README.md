@@ -839,3 +839,99 @@ O Cis Control se conecta com frameworks estabelecidos:
 | **Red Team** | Teste de eficácia dos controles implementados |
 | **Gestão de Riscos** | Identificação e mitigação de lacunas de segurança |
 
+### MITRE ATT&CK® Framework
+
+O **MITRE ATT&CK®** (Adversarial Tactics, Techniques, and Common Knowledge) é um framework de conhecimento globalmente reconhecido que cataloga e descreve o comportamento de adversários cibernéticos. Ele serve como uma base fundamental para entender como os atacantes operam em diversos ambientes, permitindo que organizações melhorem suas defesas através de uma linguagem comum e modelagem de ameaças prática.
+
+#### Conceitos Fundamentais
+
+O framework é estruturado em torno de dois conceitos principais:
+
+| Conceito | Definição | Exemplo |
+| :--- | :--- | :--- |
+| **Táticas** | O **"porquê"** de uma ação. Representam o objetivo macro do atacante em uma fase específica do ataque. | Persistência, Acesso Inicial, Exfiltração de Dados. |
+| **Técnicas** | O **"como"** uma tática é alcançada. São os métodos específicos usados pelos atacantes para executar uma tática. | Phishing, Execução de Scripts, Exploração de Vulnerabilidades. |
+
+#### Matriz ATT&CK: Uma Visão Estruturada
+
+A matriz ATT&CK organiza as táticas e técnicas de forma visual, permitindo uma análise clara do ciclo de vida de um ataque. Abaixo está uma representação simplificada do processo:
+
+```mermaid
+flowchart LR
+    A[Reconhecimento] --> B[Acesso Inicial]
+    B --> C[Execução]
+    C --> D[Persistência]
+    D --> E[Escalação de Privilégios]
+    E --> F[Evasião de Defesas]
+    F --> G[Acesso a Credenciais]
+    G --> H[Descoberta]
+    H --> I[Movimento Lateral]
+    I --> J[Coleta de Dados]
+    J --> K[Comando e Controle]
+    K --> L[Exfiltração]
+    L --> M[Impacto]
+
+    subgraph Táticas[Táticas do ATT&CK]
+        A
+        B
+        C
+        D
+        E
+        F
+        G
+        H
+        I
+        J
+        K
+        L
+        M
+    end
+```
+
+#### Aplicações Práticas do Framework
+
+O MITRE ATT&CK é amplamente utilizado para:
+
+##### 1. Modelagem de Ameaças (Threat Modeling)
+*   **Como usar:** Identifique quais táticas e técnicas são mais relevantes para o seu ambiente (ex: nuvem AWS, redes Windows, aplicações mobile).
+*   **Benefício:** Foca seus esforços e investimentos nas defesas que combatem as ameaças mais prováveis à sua organização.
+
+##### 2. Testes de Segurança (Red Team & Purple Team)
+*   **Como usar:** Red Teams usam a matriz como um "menu" para planejar operações de teste realistas, simulando adversários específicos.
+*   **Benefício:** Testa a eficácia dos controles de segurança de forma sistemática e mensurável.
+
+##### 3. Análise de Gaps e Melhoria de Maturidade
+*   **Como usar:** Mapeie cada técnica para os controles de segurança existentes na sua organização (ex: SIEM, EDR, Firewall). Crie uma "matriz térmica" para visualizar cobertura.
+    *   **🟢 Verde:** Cobertura adequada
+    *   **🟡 Amarelo:** Cobertura parcial
+    *   **🔴 Vermelho:** Sem cobertura
+*   **Benefício:** Identifica lacunas de defesa de forma clara e prioriza ações de remedição.
+
+##### 4. Resposta a Incidentes (DFIR - Digital Forensics and Incident Response)
+*   **Como usar:** Durante uma investigação, correlacione os artefatos encontrados (logs, arquivos, tráfego de rede) com técnicas do ATT&CK para entender a campanha do atacante.
+*   **Benefício:** Acelera a investigação e facilita a comunicação entre analistas.
+
+#### Exemplo Prático: Ataque de Phishing
+
+| Tática | Técnica | Procedimento/Exemplo |
+| :--- | :--- | :--- |
+| **Acesso Inicial** | **T1566: Phishing** | Envio de e-mails maliciosos se passando pelo departamento de TI. |
+| **Execução** | **T1204.002: User Execution** | O usuário é enganado e clica em um link que executa um script malicioso. |
+| **Persistência** | **T1543.003: Windows Service** | O script cria um novo serviço no Windows para se executar na inicialização. |
+
+#### Como Começar a Usar
+
+1.  **Acesse o Site Oficial:** [https://attack.mitre.org/](https://attack.mitre.org/)
+2.  **Explore as Matrizes:** Navegue pelas matrizes para Enterprise (ambientes de rede), Mobile (iOS/Android) e ICS (sistemas industriais).
+3.  **Identifique Técnicas Relevantes:** Baseie-se no seu perfil de risco e ambiente tecnológico.
+4.  **Mapeie para Seus Controles:** Para cada técnica priorizada, pergunte: "Meus controles atuais detectam ou previnem isso?"
+5.  **Teste e Itere:** Use as técnicas em exercícios de Red Team ou simulações para validar a eficácia.
+
+#### Benefícios Chave
+
+*   **Linguagem Comum:** Fornece uma terminologia padrão para equipes de segurança, risco e TI.
+*   **Foco no Inimigo:** Muda o foco de vulnerabilidades isoladas para o comportamento real do adversário.
+*   **Ação Prática:** Traduz intelligence de ameaças em ações defensivas tangíveis.
+*   **Melhoria Contínua:** Permite medir e elevar continuamente a maturidade do programa de segurança.
+
+
