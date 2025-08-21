@@ -448,3 +448,100 @@ A fase final consiste em apagar logs e quaisquer evidências da atividade malici
 
 ---
 
+### Controles de Segurança em Aplicações
+
+Um controle de segurança é uma medida implementada para **minimizar riscos** sobre ativos valiosos (dados, aplicações, sistemas) através da **antecipação a possíveis ataques**. Seu objetivo é mitigar e resolver problemas antes mesmo que ocorram, protegendo os ativos contra ameaças.
+
+#### Classificação dos Controles
+
+| Tipo de Controle | Objetivo | Exemplos |
+|------------------|----------|----------|
+| **Preventivo** | Impedir que riscos sejam explorados e se tornem vulnerabilidades | WAF, Desenvolvimento Seguro, CSP |
+| **Detectivo** | Identificar a ocorrência de ameaças antes que causem danos | Ferramentas de monitoramento e alerta |
+| **Corretivo** | Corrigir problemas já detectados | Aplicação de patches, remediação de vulnerabilidades |
+| **Dissuasivo** | Reduzir a probabilidade de exploração de riscos | Códigos que previnem vulnerabilidades |
+
+#### Tipos de Controles por Natureza
+
+| Categoria | Descrição | Exemplos |
+|-----------|-----------|----------|
+| **Técnicos/Lógicos** | Implementados através de tecnologia | Firewalls, validação de entrada, criptografia |
+| **Físicos** | Medidas de proteção tangíveis | Cadeados, fechaduras, controle de acesso físico |
+| **Administrativos** | Políticas e procedimentos | Treinamentos, políticas de segurança, processos |
+
+#### Aplicação em Vulnerabilidades (Exemplo: XSS)
+
+| Controle | Aplicação contra XSS |
+|----------|----------------------|
+| **Preventivo** | Implementação de WAF, uso de CSP (Content Security Policy) |
+| **Detectivo** | Monitoramento para identificação de código malicioso |
+| **Corretivo** | Aplicação de patches e correção do código vulnerável |
+| **Dissuasivo** | Funções que impedem escape de HTML, validação de entrada |
+
+#### Critérios de Seleção de Controles
+
+- **Valor do ativo**: Importância financeira e estratégica do que está sendo protegido
+- **Custo de substituição**: Relação custo-benefício entre implementar controle vs. corrigir danos
+- **Camadas de proteção**: Implementação em múltiplos níveis para defesa em profundidade
+
+### Controles de Segurança - Classificação e Aplicações
+
+#### Tipos de Controles de Segurança
+
+| Tipo de Controle | Objetivo Principal | Exemplos Práticos |
+|------------------|-------------------|------------------|
+| **Dissuasivo** | Reduzir a probabilidade de riscos através da intimidação | Placas de monitoramento, segurança armada, mensagens legais em sites |
+| **Detectivo** | Identificar atividades maliciosas para resposta rápida | Câmeras de segurança, monitoramento de rede, logs, Splunk |
+| **Preventivo** | Impedir a exploração de riscos e acessos não autorizados | Firewalls, antivírus, MFA, criptografia TLS, controle de permissões |
+| **Físico** | Proteção tangível de ativos e informações | Cadeados, fechaduras, portões, câmeras de vigilância |
+| **Técnico** | Implementação de soluções tecnológicas de segurança | Firewalls, desenvolvimento seguro, antivírus, criptografia |
+| **Administrativo** | Políticas e procedimentos organizacionais | Segregação de funções, diferença de permissões, políticas de acesso |
+
+##### Aplicações Específicas por Categoria
+
+###### Controles Dissuasivos
+- **Físicos**: Monitoramento pessoal, placas indicativas, segurança armada
+- **Digitais**: Mensagens legais em sites indicando monitoramento
+- **Objetivo**: Desencorajar tentativas de ataque antes que ocorram
+
+###### Controles Detectivos
+- **Monitoramento**: Identificação de anomalias na rede e atividades suspeitas
+- **Ferramentas**: Sistemas de logs, Splunk, CIEM
+- **Resposta**: Alertas para equipe de segurança para ação imediata
+
+###### Controles Preventivos
+- **Rede**: Firewalls para prevenir DDoS e monitorar tráfego
+- **Endpoint**: Antivírus para bloquear malware e scripts maliciosos
+- **Autenticação**: MFA (Multi-Factor Authentication) para verificação de identidade
+- **Criptografia**: TLS para proteção de dados em trânsito
+
+#### Medidas de Segurança por Área
+
+##### Controles Físicos
+- Dispositivos de bloqueio (cadeados, fechaduras)
+- Sistemas de vigilância (câmeras)
+- Controle de acesso físico (portões, segurança armada)
+
+###### Controles Técnicos
+- Proteção de rede (firewalls, criptografia)
+- Segurança de endpoints (antivírus)
+- Desenvolvimento seguro
+
+##### Controles Administrativos
+- **Segregação de Funções**: 
+  - Desenvolvedores ≠ implantação em produção
+  - Times especializados (SRE/DevOps) para deploy
+- **Controle de Permissões**:
+  - Diferença de acessos entre juniores e seniores
+  - Restrição a informações sensíveis
+- **Políticas de Segurança**:
+  - Procedimentos definidos para acesso a recursos
+  - Prevenção de acesso excessivo a informações
+
+#### Benefícios da Implementação
+
+- **Redução de riscos** através de múltiplas camadas de proteção
+- **Resposta rápida** a incidentes de segurança
+- **Prevenção** de acessos não autorizados e vazamento de dados
+- **Conformidade** com políticas de segurança organizacionais
+- **Proteção integral** dos ativos físicos e digitais da organização
