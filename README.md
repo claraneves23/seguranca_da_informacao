@@ -741,15 +741,15 @@ Ajudar organizações a:
 - **Testes de segurança** - Validação de requisitos e vulnerabilidades
 - **Linha de base de segurança** - Configurações padrão seguras
 
-### SysControl
+### CIS Control
 
-O **SysControl** é um framework de segurança da informação desenvolvido por uma organização sem fins lucrativos, focado na aplicação prática de controles de segurança. Ele opera em conjunto com o **SysBenchmark**, que fornece benchmarks específicos para ambientes como AWS, oferecendo orientações concretas para mitigar riscos antes da exploração de vulnerabilidades.
+O **CIS Control** é um framework de segurança da informação desenvolvido por uma organização sem fins lucrativos, focado na aplicação prática de controles de segurança. Ele opera em conjunto com o **CIS Benchmark**, que fornece benchmarks específicos para ambientes como AWS, oferecendo orientações concretas para mitigar riscos antes da exploração de vulnerabilidades.
 
 #### Arquitetura do Framework
 
 ```mermaid
 graph TD
-    A[SysControl Framework] --> B[SysBenchmark]
+    A[CIS Control Framework] --> B[CIS Benchmark]
     A --> C[Controles por Maturidade]
     
     B --> D[Benchmarks Específicos<br>ex: AWS]
@@ -765,7 +765,7 @@ graph TD
 
 #### Níveis de Maturidade e Controles
 
-O SysControl categoriza os controles de segurança em três níveis de maturidade:
+O CIS Control categoriza os controles de segurança em três níveis de maturidade:
 
 | Nível | Maturidade | Exemplos de Controles |
 | :--- | :--- | :--- |
@@ -785,14 +785,14 @@ O framework cobre múltiplos domínios de segurança através de controles espec
 | **Defesa contra Malware** | Antivírus, prevenção de ameaças |
 | **Gestão de Identidade** | Controle de acesso, autenticação multifator |
 
-#### Aplicação Prática do SysControl
+#### Aplicação Prática do CIS Control
 
 ###### Fluxo de Implementação
 
 ```mermaid
 sequenceDiagram
     participant C as Consultor
-    participant F as Framework SysControl
+    participant F as Framework CIS Control
     participant A as Ambiente do Cliente
     
     C->>F: Avalia maturidade atual (G1, G2, N3)
@@ -805,7 +805,7 @@ sequenceDiagram
 
 #### Exemplo de Aplicação em Cloud AWS
 
-| Controle | Problema | Solução SysControl |
+| Controle | Problema | Solução Cis Control |
 | :--- | :--- | :--- |
 | **Gestão de usuário root** | Conta com privilégios totais comprometida | Remover acesso administrativo indevido |
 | **Monitoramento de acesso** | Ações privilegiadas não rastreadas | Implementar logging e alertas no IAM |
@@ -813,7 +813,7 @@ sequenceDiagram
 
 #### Integração com Outras Estruturas
 
-O SysControl se conecta com frameworks estabelecidos:
+O Cis Control se conecta com frameworks estabelecidos:
 
 | Framework | Tipo de Integração | Benefício |
 | :--- | :--- | :--- |
@@ -831,7 +831,7 @@ O SysControl se conecta com frameworks estabelecidos:
 
 #### Casos de Uso Principais
 
-| Área | Aplicação do SysControl |
+| Área | Aplicação do CIS Control |
 | :--- | :--- |
 | **Consultoria** | Avaliação de maturidade e recomendação de controles |
 | **Desenvolvimento Seguro** | Padronização de controles preventivos |
