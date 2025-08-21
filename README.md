@@ -545,3 +545,153 @@ Um controle de segurança é uma medida implementada para **minimizar riscos** s
 - **Prevenção** de acessos não autorizados e vazamento de dados
 - **Conformidade** com políticas de segurança organizacionais
 - **Proteção integral** dos ativos físicos e digitais da organização
+
+### Segurança em Camadas e Defesa em Profundidade
+
+#### Conceitos Fundamentais
+
+| Conceito | Definição | Objetivo |
+|----------|-----------|----------|
+| **Superfície de Ataque** | Área total de vulnerabilidades expostas em um ambiente | Quantificar pontos de exploração potencial |
+| **Camadas de Segurança** | Divisão da infraestrutura em níveis de proteção | Estabelecer múltiplas barreiras de defesa |
+| **Defesa em Profundidade** | Estratégia de segurança com camadas sobrepostas | Proteger recursos críticos através de barreiras múltiplas |
+
+#### Camadas de Segurança em Aplicações Web
+
+| Camada | Componentes | Controles de Segurança |
+|--------|-------------|------------------------|
+| **Rede/Perímetro** | Firewalls, roteadores, switches | Firewalls, detecção de anomalias, monitoramento de tráfego |
+| **Host/Servidor** | Sistemas operacionais, serviços | Antivírus, patches, hardening de sistema |
+| **Aplicação** | Código, frameworks, APIs | WAF, desenvolvimento seguro, validação de entrada |
+| **Dados** | Bancos de dados, armazenamento | Criptografia, backup, controle de acesso |
+| **Física** | Data centers, salas de servidor | Câmeras, trancas, controle de acesso físico |
+| **Usuário** | Pessoas, estações de trabalho | Treinamento, conscientização, políticas de uso |
+
+#### Tipos de Controles por Função
+
+| Tipo de Controle | Função | Exemplos |
+|------------------|--------|----------|
+| **Preventivo** | Impedir a ocorrência de incidentes | Firewalls, WAF, criptografia, autenticação MFA |
+| **Detectivo** | Identificar atividades maliciosas | Monitoramento de logs, IDS, análise de anomalias |
+| **Corretivo** | Remediar problemas identificados | Backup, disaster recovery, patches de correção |
+| **Dissuasivo** | Desencorajar tentativas de ataque | Placas de vigilância, políticas visíveis, avisos legais |
+
+#### Estratégias de Resposta a Incidentes
+
+##### Ciclo de Resposta a Incidentes
+1. **Identificação**: Detecção do evento através de monitoramento
+2. **Contenção**: Isolar e restringir o impacto (sala de guerra)
+3. **Mitigação**: Aplicar controles para neutralizar a ameaça
+4. **Recuperação**: Restaurar sistemas através de backups
+5. **Revisão**: Análise pós-incidente para aprendizado
+
+##### Componentes de Resiliência
+- **Balanceamento de Carga**: Distribuição de tráfego para evitar sobrecarga
+- **Redundância**: Sistemas alternativos para continuidade operacional
+- **Disaster Recovery**: Plano de recuperação de desastres
+- **Backups**: Cópias de segurança regulares para restauração
+
+#### Implementação Prática por Camada
+
+##### Camada de Rede
+- Criptografia TLS para dados em trânsito
+- Firewalls para filtragem de tráfego
+- Detecção de intrusões e anomalias
+- Listas de controle de acesso (ACLs)
+
+##### Camada de Aplicação
+- WAF (Web Application Firewall) para filtragem de requisições
+- Desenvolvimento seguro para prevenção de XSS, SQL Injection
+- Validação de entradas e tratamento de dados
+- Headers de segurança (CSP, HSTS)
+
+##### Camada de Dados
+- Criptografia de dados em repouso
+- Políticas de backup e retenção
+- Controle de acesso granular
+- Procedures de exclusão segura
+
+##### Camada de Usuário
+- Treinamento contra phishing e engenharia social
+- Políticas de senha e autenticação
+- Conscientização sobre compartilhamento de informações
+- Prevenção de vazamento de credenciais
+
+#### Benefícios da Abordagem em Camadas
+
+- **Redução da superfície de ataque** através de múltiplas barreiras
+- **Dificultação de ataques** diretos contra aplicações
+- **Detecção mais rápida** de atividades maliciosas
+- **Resposta eficiente** a incidentes de segurança
+- **Aumento da maturidade** de segurança organizacional
+- **Proteção integral** dos recursos críticos da organização
+
+### Políticas, Normas e Padrões de Segurança
+
+#### Estrutura de Governança de Segurança
+
+| Componente | Definição | Características | Exemplos |
+|------------|-----------|-----------------|----------|
+| **Política** | Diretriz geral de segurança | Abrangente, estabelece o "porquê" | Política de Segurança da Informação, Política de Desenvolvimento Seguro |
+| **Norma** | Regras específicas a serem seguidas | Específica, define o "o que" | Monitorar acessos críticos, Adicionar logs em bancos de dados |
+| **Diretriz** | Orientação detalhada de implementação | Detalhada, especifica "como" | Senhas com 12-14 caracteres (maiúsculas, minúsculas, especiais) |
+| **Procedimento** | Descrição passo a passo de ações | Operacional, define "como fazer" | Implementar biblioteca de escape HTML, Configurar CSP header |
+
+#### Frameworks e Padronizações
+
+| Framework | Descrição | Aplicação |
+|-----------|-----------|-----------|
+| **ISO 27001** | Norma internacional de gestão de segurança da informação | Certificação de ambientes seguros |
+| **NIST** | Framework de segurança cibernética | Gestão de riscos e controles de segurança |
+| **COBIT** | Framework de governança de TI | Alinhamento entre TI e negócios |
+| **MITRE ATT&CK** | Base de conhecimento de táticas e técnicas de adversários | Detecção e prevenção de ameaças |
+| **SUSCONTROL** | Padronização para conformidade e certificação | Manutenção de ambientes seguros |
+
+#### Componentes de Políticas de Segurança
+
+##### Elementos Essenciais
+- **Sanitização de Inputs**: Prevenção contra XSS e outras vulnerabilidades
+- **Criptografia de Dados**: Proteção de dados em trânsito e em repouso
+- **Gestão de Dados Sensíveis**: Exclusão periódica conforme LGPD (6 meses)
+- **Controle de Acessos**: Definição de who, what, how
+- **Logs e Monitoramento**: Rastreamento de atividades críticas
+
+#### Implementação e Conformidade
+
+##### Responsabilidades Organizacionais
+| Função | Responsabilidade |
+|--------|------------------|
+| **CISO** | Liderança da área de segurança |
+| **Diretor** | Determinação de ações e diretrizes |
+| **Equipe de SI** | Implementação e manutenção dos controles |
+
+#### Processos de Gestão
+- **Avaliação de Riscos**: Priorização de ações baseada em criticidade
+- **Conformidade com Auditorias**: Manutenção de padrões estabelecidos
+- **Melhoria Contínua**: Avaliação e aprimoramento constante do ambiente
+- **Eficiência Operacional**: Crescimento gradual da maturidade em segurança
+
+#### Benefícios da Padronização
+
+- **Redução de Riscos**: Mitigação de ameaças através de controles implementados
+- **Conformidade Regulatória**: Adequação à LGPD e outras regulamentações
+- **Ambiente Seguro**: Proteção dos ativos organizacionais
+- **Maturidade em Segurança**: Evolução constante dos processos de segurança
+- **Padronização Empresarial**: Alinhamento com melhores práticas do mercado
+
+#### Exemplos de Implementação Prática
+
+##### Desenvolvimento Seguro
+- **Sanitização de Inputs**: Uso de bibliotecas de escape HTML
+- **Headers de Segurança**: Implementação de CSP (Content Security Policy)
+- **Criptografia**: Proteção de dados sensíveis em trânsito
+
+#### Gestão de Dados
+- **Retenção**: Exclusão periódica de dados sensíveis (conforme LGPD)
+- **Logs**: Implementação de logging em bancos de dados e sistemas
+- **Atualizações**: Políticas de atualização de bibliotecas e bancos de dados
+
+#### Controles de Acesso
+- **Autenticação**: Políticas de senha robustas
+- **Autorização**: Definição clara de permissões por função
+- **Auditoria**: Monitoramento de acessos críticos
