@@ -741,3 +741,101 @@ Ajudar organizações a:
 - **Testes de segurança** - Validação de requisitos e vulnerabilidades
 - **Linha de base de segurança** - Configurações padrão seguras
 
+### SysControl
+
+O **SysControl** é um framework de segurança da informação desenvolvido por uma organização sem fins lucrativos, focado na aplicação prática de controles de segurança. Ele opera em conjunto com o **SysBenchmark**, que fornece benchmarks específicos para ambientes como AWS, oferecendo orientações concretas para mitigar riscos antes da exploração de vulnerabilidades.
+
+#### Arquitetura do Framework
+
+```mermaid
+graph TD
+    A[SysControl Framework] --> B[SysBenchmark]
+    A --> C[Controles por Maturidade]
+    
+    B --> D[Benchmarks Específicos<br>ex: AWS]
+    
+    C --> E[Nível G1<br>Básico]
+    C --> F[Nível G2<br>Intermediário]
+    C --> G[Nível 3<br>Avançado]
+    
+    E --> H[Criptografia de Dados]
+    F --> I[Controle de Acesso<br>Monitoramento<br>Autenticação]
+    G --> J[Controles Avançados<br>de Detecção e Resposta]
+```
+
+#### Níveis de Maturidade e Controles
+
+O SysControl categoriza os controles de segurança em três níveis de maturidade:
+
+| Nível | Maturidade | Exemplos de Controles |
+| :--- | :--- | :--- |
+| **G1** | Básica | Proteção de dados com criptografia |
+| **G2** | Intermediária | Login, monitoramento, controle de acesso |
+| **G3** | Avançada | Controles sofisticados de detecção e resposta |
+
+#### Domínios de Segurança Abordados
+
+O framework cobre múltiplos domínios de segurança através de controles específicos:
+
+| Domínio | Exemplos de Controles |
+| :--- | :--- |
+| **Proteção de Dados** | Criptografia, classificação de dados |
+| **Controle de Software** | Gerenciamento de vulnerabilidades, políticas de instalação |
+| **Recuperação de Dados** | Backup, planos de recuperação de desastres |
+| **Defesa contra Malware** | Antivírus, prevenção de ameaças |
+| **Gestão de Identidade** | Controle de acesso, autenticação multifator |
+
+#### Aplicação Prática do SysControl
+
+###### Fluxo de Implementação
+
+```mermaid
+sequenceDiagram
+    participant C as Consultor
+    participant F as Framework SysControl
+    participant A as Ambiente do Cliente
+    
+    C->>F: Avalia maturidade atual (G1, G2, N3)
+    C->>A: Coleta informações do ambiente
+    F->>C: Recomenda controles específicos
+    C->>A: Implementa controles práticos
+    C->>A: Monitora eficácia (semanais/mensais)
+    C->>F: Atualiza nível de maturidade
+```
+
+#### Exemplo de Aplicação em Cloud AWS
+
+| Controle | Problema | Solução SysControl |
+| :--- | :--- | :--- |
+| **Gestão de usuário root** | Conta com privilégios totais comprometida | Remover acesso administrativo indevido |
+| **Monitoramento de acesso** | Ações privilegiadas não rastreadas | Implementar logging e alertas no IAM |
+| **Controle de permissões** | Privilégios excessivos em serviços | Aplicar princípio do menor privilégio |
+
+#### Integração com Outras Estruturas
+
+O SysControl se conecta com frameworks estabelecidos:
+
+| Framework | Tipo de Integração | Benefício |
+| :--- | :--- | :--- |
+| **CSF (NIST)** | Avaliação inicial do ambiente | Entendimento do contexto geral |
+| **GRC** | Processos de auditoria | Verificação de conformidade |
+| **Red Team** | Testes de eficácia | Validação prática dos controles |
+
+#### Benefícios da Implementação
+
+1. **Praticidade**: Instruções passo a passo para implementação
+2. **Escalabilidade**: Controles adaptáveis aos diferentes níveis de maturidade
+3. **Especificidade**: Benchmarks para ambientes específicos (ex: AWS)
+4. **Abrangência**: Cobertura completa de domínios de segurança
+5. **Continuidade**: Metodologia para monitoramento e melhoria contínua
+
+#### Casos de Uso Principais
+
+| Área | Aplicação do SysControl |
+| :--- | :--- |
+| **Consultoria** | Avaliação de maturidade e recomendação de controles |
+| **Desenvolvimento Seguro** | Padronização de controles preventivos |
+| **GRC e Auditoria** | Verificação de conformidade com melhores práticas |
+| **Red Team** | Teste de eficácia dos controles implementados |
+| **Gestão de Riscos** | Identificação e mitigação de lacunas de segurança |
+
