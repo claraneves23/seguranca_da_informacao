@@ -935,3 +935,65 @@ O MITRE ATT&CK é amplamente utilizado para:
 *   **Melhoria Contínua:** Permite medir e elevar continuamente a maturidade do programa de segurança.
 
 
+# Segurança da Informação – Conceitos Iniciais e Segurança de TI
+
+Este repositório contém um resumo das aulas sobre **Segurança da Informação (ISG-003)**, abordando conceitos históricos, evolução da criptografia e a diferença entre **Segurança da Informação** e **Segurança de TI**.
+
+---
+
+## 📜 Histórico da Segurança da Informação
+
+A proteção das informações evoluiu ao longo da história para garantir **confidencialidade**, **integridade** e **disponibilidade**.
+
+| Período | Marco Histórico | Descrição |
+| :--- | :--- | :--- |
+| **Antiguidade** | Criptografia Clássica (1900 a.C. a 500 d.C.) | Uso de códigos para proteger mensagens. |
+| | Criptografia Hebraica (Atbash ~600 a.C.) | Substituição de letras no alfabeto. |
+| | Cítala Espartana (~490 a.C.) | Técnica com bastão para transposição de mensagens. |
+| | Cifra de César (~70 a.C.) | Substituição de caracteres com deslocamento fixo. |
+| **Idade Média** | Al-Kindi (séc. IX) | Desenvolveu a **criptoanálise** baseada em análise de frequência. |
+| **Era Moderna** | Cifra de Vigenère (1553) | Considerada “indecifrável” por séculos. |
+| | Cifra Playfair (1854) | Uso de pares de letras para aumentar a complexidade. |
+| | Estatística aplicada à criptoanálise | Tornou os ataques mais eficientes. |
+| **Era Computacional** | Máquina Enigma (1918) | Utilizada na Segunda Guerra, quebrada por Alan Turing. |
+| | Computador Colossus (1943) | Para decifrar mensagens criptografadas. |
+| | RSA (1977) | Primeiro algoritmo prático de **chave pública**. |
+| | Orange Book (1978) | Primeiro padrão formal de segurança para sistemas. |
+
+---
+
+## 🔐 Segurança da Informação vs. Segurança de TI
+
+### Visão Geral Comparativa
+
+| Área | Abrangência | Foco Principal | Exemplos de Componentes |
+| :--- | :--- | :--- | :--- |
+| **Segurança da Informação** | **Ampla** (Estratégica/Organizacional) | Proteger **dados e informações** como um todo, independente da forma. | Políticas de Segurança (PSI), Gestão de Riscos, LGPD/GDPR, Plano de Continuidade (BCP), Governança de Dados. |
+| **Segurança de TI** | **Específica** (Tática/Operacional) | Proteger a **infraestrutura tecnológica** que armazena, processa e transmite dados. | Firewalls, Antivírus, SIEM, Controle de Acesso, Backup, IDS/IPS. |
+
+---
+
+## 🔧 Segurança de TI – Detalhamento de Componentes
+
+A **Segurança de TI** é um subconjunto da Segurança da Informação, responsável por proteger os **ativos tecnológicos**. A tabela abaixo detalha seus principais componentes:
+
+| Componente | O que é? | Função | Importância |
+| :--- | :--- | :--- | :--- |
+| **Infraestrutura** (Servidores, DB, Redes) | Estrutura física e lógica que sustenta sistemas e dados. | Armazenar e processar informações de forma segura. | São os principais alvos de ataques. Seu comprometimento pode levar à exposição de dados e interrupção de serviços. |
+| **Antivírus** | Software que detecta e remove malware. | Bloquear, detectar e remover códigos maliciosos (vírus, ransomware). | Protege a integridade dos sistemas contra ameaças conhecidas. |
+| **Firewall/WAF** | Dispositivo/software que controla o tráfego de rede. | Filtrar o tráfego com base em regras de segurança definidas. | É a primeira linha de defesa, impedindo conexões não autorizadas e ataques externos. O **WAF** protege especificamente aplicações web. |
+| **VPN/ZTNA** | Tecnologias de acesso seguro. | **VPN**: Criptografa a conexão do usuário remoto com a rede corporativa.<br>**ZTNA**: Modelo de "confiança zero" que verifica sempre antes de conceder acesso. | Permitem o acesso remoto seguro, garantindo **confidencialidade** e **integridade** dos dados em trânsito. O ZTNA moderniza a segurança reduzindo o risco de ataques internos. |
+| **IDS/IPS/IDPS** | Sistemas de detecção e prevenção de intrusões. | **IDS**: Monitora e alerta sobre atividades maliciosas.<br>**IPS**: Detecta e **bloqueia automaticamente** ameaças. | Identificam tentativas de invasão e ataques em tempo real, permitindo uma resposta rápida. |
+| **SIEM/SOAR/EDR/XDR** | Ferramentas de monitoramento e resposta. | **SIEM**: Coleta e correlaciona logs.<br>**SOAR**: Automatiza respostas.<br>**EDR**: Protege endpoints.<br>**XDR**: Integra proteção em múltiplas camadas. | Permitem detectar **ataques sofisticados** e responder rapidamente a incidentes, reduzindo o tempo de reação. |
+| **Backup & Recuperação** | Processo de cópia e restauração de dados. | Manter cópias seguras dos dados para restaurá-los em caso de perda. | É a defesa final contra **ransomware**, falhas críticas ou desastres naturais, garantindo a **disponibilidade** das informações. |
+| **Controle de Acesso & DLP** | Controles para gerenciar e proteger dados. | **Controle de Acesso**: Define quem pode acessar o quê (ex: RBAC).<br>**DLP**: Monitora e bloqueia a saída de dados sensíveis. | Impede vazamentos de dados, sejam acidentais ou maliciosos, e assegura que apenas pessoas autorizadas acessem informações críticas. |
+
+---
+
+## ✅ Principais Conceitos
+
+*   **Criptografia**: Técnica para proteger informações por meio da codificação.
+*   **Criptoanálise**: Estudo e prática para quebrar criptografia.
+*   **Gestão de Riscos**: Identificação, análise e mitigação de ameaças.
+*   **Plano de Continuidade (BCP)**: Estratégias para manter operações após incidentes.
+*   **LGPD/GDPR**: Leis para garantir a privacidade e proteção de dados pessoais.
