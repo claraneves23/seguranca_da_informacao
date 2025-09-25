@@ -1002,3 +1002,109 @@ A proteção das informações evoluiu ao longo da história para garantir **con
 *   **Gestão de Riscos**: Identificação, análise e mitigação de ameaças.
 *   **Plano de Continuidade (BCP)**: Estratégias para manter operações após incidentes.
 *   **LGPD/GDPR**: Leis para garantir a privacidade e proteção de dados pessoais.
+
+Aqui está o conteúdo que você passou, estruturado em **Markdown** com títulos, subtítulos, listas e destaques para facilitar o estudo:
+
+---
+
+# Aula 03 - Criptografia
+
+## 📌 Criptografia Simétrica
+
+* Usa a **mesma chave** para cifrar e decifrar.
+* Geralmente **mais rápida** que a criptografia assimétrica.
+* Exige **compartilhamento seguro da chave** entre as partes.
+* A chave é conhecida pelas partes envolvidas, mas **não é pública para todos**.
+* **Exemplos**: `AES`, `DES`, `3DES`, `RC4`.
+
+👉 **Indicações de uso**:
+
+* Criptografia de dados em repouso (**HDs, bancos de dados**).
+* **VPNs**.
+* Conexões seguras ponto a ponto.
+* Comunicação segura em redes sem fio.
+
+---
+
+## 📌 Criptografia Assimétrica
+
+* Usa **duas chaves diferentes**:
+
+  * **Pública**: cifra/verifica.
+  * **Privada**: decifra/assina.
+* Mais **segura para troca de informações**, mas **mais lenta** que a simétrica.
+* Muito usada na internet para **comunicações seguras**.
+* **Exemplos**: `RSA`, `ECC`, `ElGamal`.
+
+👉 **Indicações de uso**:
+
+* Conexões HTTPS (SSL/TLS).
+* Troca de **e-mails criptografados**.
+* **Assinaturas digitais**.
+
+---
+
+## 📌 Função Hash
+
+* Não é criptografia, mas usada em contextos criptográficos.
+* Garante **integridade** e **restrição de acesso** a informações.
+* Não é possível "descriptografar" um hash.
+* A partir de uma entrada (texto, arquivo), gera uma **saída fixa**, normalmente um valor alfanumérico.
+* Funciona como uma **impressão digital da informação**.
+
+---
+
+## 📌 Esteganografia
+
+* Também não é criptografia.
+* Consiste em **ocultar mensagens** dentro de arquivos, imagens, áudios ou vídeos.
+* O objetivo é que a **existência da mensagem** não seja detectada.
+
+---
+
+## 📌 Certificados Digitais
+
+* Documento eletrônico que **vincula uma identidade a uma chave pública**.
+* Emitido por uma **CA (Certification Authority)**.
+* Baseado na **ICP-Brasil**, com validade internacional.
+* Estrutura básica: **chave pública + dados do proprietário + assinatura da CA**.
+
+👉 **Órgãos envolvidos**:
+
+* **AC (Autoridade Certificadora)**: emite certificados.
+* **AR (Autoridade Registradora)**: faz o registro, mas a validação é feita na emissão.
+
+🔗 Mais detalhes: [Infraestrutura de Chaves Públicas Brasileira](https://estrutura.iti.gov.br)
+
+---
+
+## 📌 Assinaturas Digitais
+
+* Prova de **autenticidade** e **integridade** de documentos eletrônicos.
+* **Funcionamento básico**:
+
+  1. Chave privada assina o documento.
+  2. Chave pública valida a assinatura.
+* A combinação das duas chaves garante a **validade do documento**.
+
+👉 **Carimbo de Tempo**:
+
+* Necessário para registrar a data e hora oficial do documento.
+* Baseado no ICP, requer conexão à internet.
+
+---
+
+## 📌 Pilares da Segurança da Informação (CIA)
+
+* **Confidencialidade**: apenas quem tem permissão acessa os dados.
+* **Integridade**: garantia de que a informação não foi alterada.
+* **Disponibilidade**: sistemas e dados acessíveis quando necessário.
+
+### ➕ Novas Dimensões
+
+* **Responsabilidade**: responder legalmente pelas ações no meio digital.
+* **Não-repúdio (Irretratabilidade)**: impossibilidade de negar autoria de ações autenticadas.
+* **Autenticidade**: comprovação da identidade de quem acessa o ambiente.
+
+---
+
