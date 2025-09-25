@@ -933,7 +933,7 @@ O MITRE ATT&CK é amplamente utilizado para:
 *   **Melhoria Contínua:** Permite medir e elevar continuamente a maturidade do programa de segurança.
 
 
-# Aula 01 - Conceitos Iniciais e Segurança de TI
+# Aula 01 - Conceitos Iniciais
 ---
 
 ## 📜 Histórico da Segurança da Informação
