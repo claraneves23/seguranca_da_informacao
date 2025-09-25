@@ -1,6 +1,6 @@
 # Segurança da Informação 🔐
 
-## Aula 01 - Fundamentos da Segurança da Informação
+## Fundamentos da Segurança da Informação
 
 ### Pilares da Segurança da Informação (Tríade CIA)
 A base da segurança da informação repousa sobre três princípios fundamentais, conhecidos como CIA:
@@ -158,9 +158,7 @@ As políticas de acesso são **dinâmicas**, podendo ser ajustadas automaticamen
 *   **Mudança Cultural:** Exige uma mudança de mentalidade de "confiança interna" para "verificação constante".
 *   **Investimento em Tecnologia e Treinamento:** Requer ferramentas robustas de identidade, monitoramento e análise, além de capacitação das equipes.
 
-## Aula 02 -Ameaças Cibernéticas e seus impactos
-
-
+## Ameaças Cibernéticas e seus impactos
 
 ### Vulnerabilidades vs. Ameaças em Segurança da Informação
 
@@ -935,10 +933,7 @@ O MITRE ATT&CK é amplamente utilizado para:
 *   **Melhoria Contínua:** Permite medir e elevar continuamente a maturidade do programa de segurança.
 
 
-# Segurança da Informação – Conceitos Iniciais e Segurança de TI
-
-Este repositório contém um resumo das aulas sobre **Segurança da Informação (ISG-003)**, abordando conceitos históricos, evolução da criptografia e a diferença entre **Segurança da Informação** e **Segurança de TI**.
-
+# Aula 01 - Conceitos Iniciais e Segurança de TI
 ---
 
 ## 📜 Histórico da Segurança da Informação
@@ -962,7 +957,7 @@ A proteção das informações evoluiu ao longo da história para garantir **con
 
 ---
 
-## 🔐 Segurança da Informação vs. Segurança de TI
+## Aula 02 - Segurança da Informação vs. Segurança de TI
 
 ### Visão Geral Comparativa
 
@@ -971,24 +966,34 @@ A proteção das informações evoluiu ao longo da história para garantir **con
 | **Segurança da Informação** | **Ampla** (Estratégica/Organizacional) | Proteger **dados e informações** como um todo, independente da forma. | Políticas de Segurança (PSI), Gestão de Riscos, LGPD/GDPR, Plano de Continuidade (BCP), Governança de Dados. |
 | **Segurança de TI** | **Específica** (Tática/Operacional) | Proteger a **infraestrutura tecnológica** que armazena, processa e transmite dados. | Firewalls, Antivírus, SIEM, Controle de Acesso, Backup, IDS/IPS. |
 
+### Riscos
+
+- **Assunção de risco**: mitigar risco - verifica o tempo e o custo para diminuir ou zera o risco - é uma decisão dividida, compartilhada, entre segurança, jurídico, financeiro, diretoria - normalmente quando a probabilidade não é tão alta 
+
+- **Gerenciamento de Crises:** Quando teve uma crise, identifica quais as pessoas serão acionadas quando ocorrer a crise, quem precisa saber e quem irá precisar atuar 
+
+- **Plano de Continuidade de Negócios (PCN/BCP):** Teve uma crise, deu ruim, qual que é o mínimo que precisa garantir para o negócio continuar acontecendo. Ex.: quais são os sistemas que podem ficar sem energia dentro de um hospital por 5 min
+
+### Componentes
+
+
+| Componente                                                | O que é?                                                          | Função                                                                                                                                                                                                                                                                                   | Importância                                                                                                                                              |
+| :-------------------------------------------------------- | :---------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Infraestrutura** (Servidores, DB, Redes)                | Estrutura física e lógica que sustenta sistemas e dados.          | Armazenar e processar informações de forma segura.                                                                                                                                                                                                                                       | São os principais alvos de ataques. Seu comprometimento pode levar à exposição de dados e interrupção de serviços.                                       |
+| **Antivírus**                                             | Software que detecta e remove malware.                            | Bloquear, detectar e remover códigos maliciosos (vírus, ransomware).                                                                                                                                                                                                                     | Protege a integridade dos sistemas contra ameaças conhecidas.                                                                                            |
+| **Firewall/WAF**                                          | Dispositivo/software que controla o tráfego de rede.              | **Firewall**: Filtra pacotes e impede conexões não autorizadas.<br>**WAF**: Protege aplicações web contra ataques e acessos indevidos (ex.: bloqueio após várias tentativas de login).                                                                                                   | O firewall é a primeira linha de defesa contra pacotes nocivos.<br>O WAF foca na **camada de aplicação**, evitando exploração de falhas em sistemas web. |
+| **Proxy (Normal e Reverso)**                              | Intermediários entre cliente e servidor.                          | **Proxy normal (encaminhamento)**: acessa a internet sem expor os dispositivos da rede.<br>**Proxy reverso**: protege servidores, mascarando seus endereços reais em requisições externas.                                                                                               | Reduz exposição dos dispositivos internos e protege servidores contra ataques diretos, aumentando a privacidade e segurança.                             |
+| **VPN/ZTNA**                                              | Tecnologias de acesso seguro.                                     | **VPN**: Cria um túnel criptografado entre dispositivo e rede corporativa.<br>**ZTNA**: Modelo “confiança zero”, com autenticações dinâmicas baseadas em contexto.                                                                                                                       | Garantem comunicação segura e **confidencialidade** dos dados em trânsito. O **ZTNA** reduz riscos internos e complementa ou substitui VPNs.             |
+| **IDS/IPS/IDPS**                                          | Sistemas de detecção e prevenção de intrusões.                    | **IDS**: Gera alertas de intrusão.<br>**IPS**: Bloqueia acessos suspeitos automaticamente.<br>**IDPS**: Combina monitoramento e prevenção.                                                                                                                                               | Permitem resposta rápida a ataques em tempo real e aumentam a resiliência da rede.                                                                       |
+| **Scan de Vulnerabilidades**                              | Ferramenta de verificação de falhas.                              | Escanear portas abertas, pacotes inseguros e elementos expostos.                                                                                                                                                                                                                         | Identifica brechas que podem ser exploradas, permitindo correção antes de um ataque.                                                                     |
+| **SIEM/SOAR/EDR/XDR**                                     | Ferramentas de monitoramento e resposta.                          | **SIEM**: Correlaciona logs e eventos.<br>**SOAR**: Automatiza respostas.<br>**EDR**: Protege endpoints.<br>**XDR**: Integra proteção em várias camadas.                                                                                                                                 | Detectam **ataques avançados** e orquestram respostas rápidas, reduzindo impacto de incidentes.                                                          |
+| **Backup & Recuperação**                                  | Cópia e restauração de dados.                                     | **Completo**: copia todo o ambiente.<br>**Incremental**: registra apenas mudanças após o último backup.<br>Políticas definem retenção e ciclos.                                                                                                                                          | Defesa final contra **ransomware** e falhas críticas, garantindo disponibilidade.                                                                        |
+| **Controle de Acesso (AutN, AutZ, SSO, MFA, RBAC, ABAC)** | Conjunto de mecanismos para validar e gerenciar acessos.          | **AutN**: Autenticação (quem é o usuário).<br>**AutZ**: Autorização (o que pode fazer).<br>**SSO**: Login único para múltiplos sistemas.<br>**MFA**: Camadas extras de autenticação.<br>**RBAC**: Permissões baseadas em papéis.<br>**ABAC**: Permissões baseadas em atributos/contexto. | Reduz risco de acessos não autorizados e vazamentos de dados, fortalecendo políticas de segurança corporativa.                                           |
+| **DLP (Data Loss Prevention)**                            | Ferramentas que evitam vazamento ou exclusão de dados.            | Monitorar, bloquear e mascarar dados sensíveis para evitar perda acidental ou ataque.                                                                                                                                                                                                    | Evita vazamentos, protege propriedade intelectual e dados confidenciais da empresa.                                                                      |
+| **Recuperação de Desastres (DR)**                         | Conjunto de práticas e tecnologias para continuidade de negócios. | Restaurar sistemas e ambientes após falhas graves ou desastres. Pode incluir redundância geográfica (outro datacenter disponível).                                                                                                                                                       | Evita perda de operação em caso de falhas críticas ou desastres físicos, garantindo **continuidade**.                                                    |
+
 ---
 
-## 🔧 Segurança de TI – Detalhamento de Componentes
-
-A **Segurança de TI** é um subconjunto da Segurança da Informação, responsável por proteger os **ativos tecnológicos**. A tabela abaixo detalha seus principais componentes:
-
-| Componente | O que é? | Função | Importância |
-| :--- | :--- | :--- | :--- |
-| **Infraestrutura** (Servidores, DB, Redes) | Estrutura física e lógica que sustenta sistemas e dados. | Armazenar e processar informações de forma segura. | São os principais alvos de ataques. Seu comprometimento pode levar à exposição de dados e interrupção de serviços. |
-| **Antivírus** | Software que detecta e remove malware. | Bloquear, detectar e remover códigos maliciosos (vírus, ransomware). | Protege a integridade dos sistemas contra ameaças conhecidas. |
-| **Firewall/WAF** | Dispositivo/software que controla o tráfego de rede. | Filtrar o tráfego com base em regras de segurança definidas. | É a primeira linha de defesa, impedindo conexões não autorizadas e ataques externos. O **WAF** protege especificamente aplicações web. |
-| **VPN/ZTNA** | Tecnologias de acesso seguro. | **VPN**: Criptografa a conexão do usuário remoto com a rede corporativa.<br>**ZTNA**: Modelo de "confiança zero" que verifica sempre antes de conceder acesso. | Permitem o acesso remoto seguro, garantindo **confidencialidade** e **integridade** dos dados em trânsito. O ZTNA moderniza a segurança reduzindo o risco de ataques internos. |
-| **IDS/IPS/IDPS** | Sistemas de detecção e prevenção de intrusões. | **IDS**: Monitora e alerta sobre atividades maliciosas.<br>**IPS**: Detecta e **bloqueia automaticamente** ameaças. | Identificam tentativas de invasão e ataques em tempo real, permitindo uma resposta rápida. |
-| **SIEM/SOAR/EDR/XDR** | Ferramentas de monitoramento e resposta. | **SIEM**: Coleta e correlaciona logs.<br>**SOAR**: Automatiza respostas.<br>**EDR**: Protege endpoints.<br>**XDR**: Integra proteção em múltiplas camadas. | Permitem detectar **ataques sofisticados** e responder rapidamente a incidentes, reduzindo o tempo de reação. |
-| **Backup & Recuperação** | Processo de cópia e restauração de dados. | Manter cópias seguras dos dados para restaurá-los em caso de perda. | É a defesa final contra **ransomware**, falhas críticas ou desastres naturais, garantindo a **disponibilidade** das informações. |
-| **Controle de Acesso & DLP** | Controles para gerenciar e proteger dados. | **Controle de Acesso**: Define quem pode acessar o quê (ex: RBAC).<br>**DLP**: Monitora e bloqueia a saída de dados sensíveis. | Impede vazamentos de dados, sejam acidentais ou maliciosos, e assegura que apenas pessoas autorizadas acessem informações críticas. |
-
----
 
 ## ✅ Principais Conceitos
 
