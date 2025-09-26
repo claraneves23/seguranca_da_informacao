@@ -966,16 +966,22 @@ A proteção das informações evoluiu ao longo da história para garantir **con
 | **Segurança da Informação** | **Ampla** (Estratégica/Organizacional) | Proteger **dados e informações** como um todo, independente da forma. | Políticas de Segurança (PSI), Gestão de Riscos, LGPD/GDPR, Plano de Continuidade (BCP), Governança de Dados. |
 | **Segurança de TI** | **Específica** (Tática/Operacional) | Proteger a **infraestrutura tecnológica** que armazena, processa e transmite dados. | Firewalls, Antivírus, SIEM, Controle de Acesso, Backup, IDS/IPS. |
 
-### Riscos
 
-- **Assunção de risco**: mitigar risco - verifica o tempo e o custo para diminuir ou zera o risco - é uma decisão dividida, compartilhada, entre segurança, jurídico, financeiro, diretoria - normalmente quando a probabilidade não é tão alta 
+### Segurança de TI
 
-- **Gerenciamento de Crises:** Quando teve uma crise, identifica quais as pessoas serão acionadas quando ocorrer a crise, quem precisa saber e quem irá precisar atuar 
+| Tópico                                   | Descrição |
+|------------------------------------------|-----------|
+| **Normas e frameworks de segurança**     | ISO, NIST, COBIT |
+| **Políticas de Segurança da Informação (PSI)** | Define como as normas e frameworks vão funcionar dentro da empresa. Ex.: regras de senha, níveis de sensibilidade do conteúdo. |
+| **Avaliação e Gestão de riscos**         | Identifica os ativos (tudo que tem valor para a empresa) e avalia riscos associados. Um ativo pode ter mais de um risco. |
+| **Assunção de risco**                    | Decisão de mitigar, aceitar ou transferir risco considerando tempo e custo. Normalmente compartilhada entre segurança, jurídico, financeiro e diretoria. Usada quando a probabilidade não é tão alta. |
+| **Gerenciamento de Crises**              | Define quem será acionado em caso de crise, quem precisa ser informado e quem atuará. |
+| **Plano de Continuidade de Negócios (PCN/BCP)** | Baseado em normas ISO. Define o mínimo necessário para manter o negócio funcionando após uma crise. Ex.: em um hospital, quais sistemas podem ficar sem energia por até 5 minutos. |
+| **Conformidade com órgãos reguladores**  | Garantia de cumprimento de normas e regulamentações. |
+| **Privacidade**                          | Legislações como LGPD, GDPR, HIPAA, entre outras. |
 
-- **Plano de Continuidade de Negócios (PCN/BCP):** Teve uma crise, deu ruim, qual que é o mínimo que precisa garantir para o negócio continuar acontecendo. Ex.: quais são os sistemas que podem ficar sem energia dentro de um hospital por 5 min
 
-### Componentes
-
+### Segurança de TI
 
 | Componente                                                | O que é?                                                          | Função                                                                                                                                                                                                                                                                                   | Importância                                                                                                                                              |
 | :-------------------------------------------------------- | :---------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1002,8 +1008,6 @@ A proteção das informações evoluiu ao longo da história para garantir **con
 *   **Gestão de Riscos**: Identificação, análise e mitigação de ameaças.
 *   **Plano de Continuidade (BCP)**: Estratégias para manter operações após incidentes.
 *   **LGPD/GDPR**: Leis para garantir a privacidade e proteção de dados pessoais.
-
-Aqui está o conteúdo que você passou, estruturado em **Markdown** com títulos, subtítulos, listas e destaques para facilitar o estudo:
 
 ---
 
