@@ -967,7 +967,7 @@ A proteção das informações evoluiu ao longo da história para garantir **con
 | **Segurança de TI** | **Específica** (Tática/Operacional) | Proteger a **infraestrutura tecnológica** que armazena, processa e transmite dados. | Firewalls, Antivírus, SIEM, Controle de Acesso, Backup, IDS/IPS. |
 
 
-### Segurança de TI
+### Segurança da Informação
 
 | Tópico                                   | Descrição |
 |------------------------------------------|-----------|
