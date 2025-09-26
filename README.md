@@ -1001,17 +1001,10 @@ A proteção das informações evoluiu ao longo da história para garantir **con
 ---
 
 
-## ✅ Principais Conceitos
+# Aula 03 - Criptografia
 
 *   **Criptografia**: Técnica para proteger informações por meio da codificação.
 *   **Criptoanálise**: Estudo e prática para quebrar criptografia.
-*   **Gestão de Riscos**: Identificação, análise e mitigação de ameaças.
-*   **Plano de Continuidade (BCP)**: Estratégias para manter operações após incidentes.
-*   **LGPD/GDPR**: Leis para garantir a privacidade e proteção de dados pessoais.
-
----
-
-# Aula 03 - Criptografia
 
 ## 📌 Criptografia Simétrica
 
